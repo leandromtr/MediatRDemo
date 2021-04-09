@@ -5,7 +5,7 @@ namespace DemoLibrary.DataAccess
 {
     public interface IDemoDataAccess
     {
-        IList<PersonModel> GetPeople();
+        List<PersonModel> GetPeople();
         PersonModel InsertPerson(string firstName, string lastName);
     }
 }

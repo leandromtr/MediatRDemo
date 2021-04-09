@@ -17,7 +17,7 @@ namespace DemoLibrary.DataAccess
             people.Add(new PersonModel { Id = 2, FirstName = "Lucas", LastName = "Souza" });
         }
 
-        public IList<PersonModel> GetPeople()
+        public List<PersonModel> GetPeople()
         {
             return people;
         }
