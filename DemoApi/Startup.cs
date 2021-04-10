@@ -1,3 +1,6 @@
+using DemoLibrary;
+using DemoLibrary.DataAccess;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +35,9 @@ namespace DemoApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DemoApi", Version = "v1" });
             });
+            services.AddSingleton<IDemoDataAccess, DemoDataAccess>();
+            services.AddMediatR(typeof(DemoLibraryMediatREntryPoint).Assembly);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
