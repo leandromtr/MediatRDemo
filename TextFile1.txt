@@ -1,0 +1,2 @@
+Project based at Intro to MediatR - Implementing CQRS and Mediator Patterns
+https://www.youtube.com/watch?v=yozD5Tnd8nw
